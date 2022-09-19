@@ -1,0 +1,122 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.852);
+  color: aliceblue;
+}
+
+.wrapper {
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: "header" "form";
+}
+
+[class*=__container] {
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1519.98px) {
+  [class*=__container] {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1199.98px) {
+  [class*=__container] {
+    max-width: 970px;
+  }
+}
+@media (max-width: 990.98px) {
+  [class*=__container] {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767.98px) {
+  [class*=__container] {
+    max-width: none;
+    padding: 0px 15px;
+  }
+}
+.header {
+  display: flex;
+  grid-area: header;
+  background: rgb(53, 53, 53);
+}
+.header .header-container {
+  display: flex;
+}
+.header .header-container .header__logo {
+  padding-top: 15px;
+  padding-left: 25px;
+}
+.header .header-container .header__logo a {
+  font-family: "Bungee Spice", cursive;
+  font-size: 25px;
+  font-weight: 800;
+}
+.header .header-container .header__ul > ul {
+  position: relative;
+  display: flex;
+  margin-left: 25px;
+  padding-top: 18px;
+  padding-left: 25px;
+}
+.header .header-container .header__ul > ul .header__items > a {
+  color: rgba(241, 234, 234, 0.718);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding-left: 25px;
+}
+.header .header-container .header__ul > ul .header__items > ul {
+  padding: 20px 0px 0px 0px;
+  position: absolute;
+  display: none;
+  min-width: 600px;
+  left: 30px;
+  top: 40px;
+  border-radius: 2px;
+}
+.header .header-container .header__ul > ul .header__items > ul > li {
+  background-color: rgb(55, 53, 53);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+.header .header-container .header__ul > ul .header__items > ul > li > a {
+  display: inline-block;
+  color: rgba(241, 236, 236, 0.718);
+  padding: 5px 10px;
+}
+.header .header-container .header__ul > ul > li:hover {
+  border-style: groove;
+  border-radius: 5px;
+}
+.header .header-container .header__ul > ul > li:hover > ul {
+  display: block;
+}
+
+.header__items ul > li:hover {
+  border-style: groove;
+  border-radius: 5px;
+}
+
+.header__social {
+  display: inline-flex;
+  margin-top: 16px;
+  margin-left: 500px;
+}
+.header__social img {
+  width: 30px;
+  height: 30px;
+}
+.header__social a {
+  padding-left: 25px;
+}
+
+input {
+  border-radius: 2px;
+  padding-left: 5px;
+}

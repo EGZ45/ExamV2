@@ -1,0 +1,170 @@
+html,
+body {
+	height: 100%;
+	
+}
+
+.wrapper {	
+	min-height: 100%;
+	display: grid;	
+	grid-template-columns: 1fr;
+	grid-template-rows: 60px 1fr 70px;	
+	grid-template-areas: "header" "page" "footer";
+	background-color: rgba(0, 0, 0, 0.852);
+}
+
+
+
+[class*="__container"] {
+	max-width: 1520px;
+	margin: 0 auto;
+	
+}
+
+@media (max-width: 1519.98px){
+	[class*="__container"] {
+		max-width: 1200px;
+	}
+}
+
+@media (max-width: 1199.98px){
+	[class*="__container"] {
+		max-width: 970px;
+	}
+}
+
+@media (max-width: 990.98px) {
+	[class*="__container"] {
+		max-width: 750px;
+	}
+}
+@media (max-width: 767.98px) {
+	[class*="__container"] {
+		max-width: none;
+		padding: 0px 15px;
+	}
+}
+
+.header {
+	display: flex;
+	grid-area: header;
+	background: rgba(53,53,53);
+	.header-container {
+		display:flex;
+		
+		.header__logo {
+			padding-top: 15px;
+			padding-left: 25px;
+			a {
+				font-family: 'Bungee Spice', cursive;
+				font-size: 25px;
+				font-weight: 800;
+			}
+			
+		}
+		.header__ul {
+			>ul{
+				position: relative;
+				display: flex;
+				margin-left: 25px;
+				padding-top: 18px;
+				padding-left: 25px;
+				
+				
+				.header__items {
+					>a {
+						color: rgba(241, 234, 234, 0.718);
+						font-family: Arial, Helvetica, sans-serif;
+						font-size: 20px;
+                  padding-left: 25px;
+					}
+				>ul {
+					padding: 20px 0px 0px 0px;
+					position: absolute;
+					
+					display: none;
+					min-width: 600px;
+					left: 30px;
+					top: 40px;
+					border-radius: 2px;
+					>li{
+						background-color: rgb(55, 53, 53);
+						
+						>a {
+							display: inline-block;
+							
+						color: rgba(241, 236, 236, 0.718);
+						padding: 5px 10px;
+					      }
+							
+				      }
+				   }
+				}
+				>li:hover {
+					border-style: groove;
+					border-radius: 5px;
+					
+					>ul {
+						display: block;
+						
+					}
+				}
+			}
+			
+		}
+		
+	}
+}
+.header__items{
+	ul>li:hover {
+		border-style: groove;
+					border-radius: 5px;
+	}
+}
+.header__social {	
+	display: inline-flex;
+margin-top: 16px;
+margin-left: 500px;
+img {
+	width: 30px;
+	height: 30px;
+}
+a {
+	padding-left: 25px;
+   
+}
+}
+
+
+
+.page {grid-area: page;}
+
+
+.main-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr) ;
+	
+	
+	img {
+		
+	width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	
+}
+
+
+.footer {
+	grid-area: footer;
+	background-color: #ffff;
+	text-align: center;
+	padding-top: 25px;
+}
+
+a {
+	
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
